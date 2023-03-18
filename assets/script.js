@@ -35,5 +35,7 @@ function Game(){
     gameClock();
 }
 
-begin.addEventListener('click', Game());
+
+
+begin.addEventListener("click", Game());
 
