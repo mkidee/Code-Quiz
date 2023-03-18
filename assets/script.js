@@ -7,6 +7,7 @@ var quizBox = document.querySelector('#quizArea');
 var questions = [
     
     {
+        number: 1,
         question: "What do we name the main html file for our webpage?",
         options: ["main.html", "page.html", "index.html", "core.html"],
         answer: "index.html"
@@ -14,14 +15,21 @@ var questions = [
     },
 
     {
+        number: 2,
         question: "At what integer does an array start at?",
         options: ["0", "1", "10", "100"],
         answer: "0"
     },
 
     {
+        number: 3,
         question: "What symbol specifies you are working on an ID in CSS?",
-        options: ["$", "#", ".", "*"],
+        options: [  
+                "$", 
+                "#", 
+                ".", 
+                "*"
+                ],
         answer: "#"
     }
 
@@ -56,7 +64,7 @@ function gameClock() {
 }
 
 function quizQ() {
-    
+
 }
 
 function Game(){
