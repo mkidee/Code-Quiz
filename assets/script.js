@@ -1,5 +1,6 @@
 var begin = document.querySelector('#start');
-var timeBox = document.querySelector('#counter')
+var timeBox = document.querySelector('#counter');
+var quizBox = document.querySelector('#quizArea');
 
 
 
@@ -52,6 +53,10 @@ function gameClock() {
       }
       // Sets the rate or interval of the function to 1000ms or 1 second.
     }, 1000); 
+}
+
+function quizQ() {
+    
 }
 
 function Game(){
