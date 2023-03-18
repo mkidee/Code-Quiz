@@ -3,6 +3,30 @@ var timeBox = document.querySelector('#counter')
 
 
 
+var questions = [
+    
+    {
+        question: "What do we name the main html file for our webpage?",
+        options: ["main.html", "page.html", "index.html", "core.html"],
+        answer: "index.html"
+
+    },
+
+    {
+        question: "At what integer does an array start at?",
+        options: ["0", "1", "10", "100"],
+        answer: "0"
+    },
+
+    {
+        question: "What symbol specifies you are working on an ID in CSS?",
+        options: ["$", "#", ".", "*"],
+        answer: "#"
+    }
+
+
+]
+
 function gameClock() {
     time = 90 // Set the time remaining to 90 seconds.
     // setInterval method is used to repeatedly call the function containing the if statements every loop (1000ms).
@@ -33,6 +57,8 @@ function gameClock() {
 function Game(){
 
     gameClock();
+
+
 }
 
 
