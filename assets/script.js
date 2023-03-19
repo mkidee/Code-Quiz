@@ -1,7 +1,9 @@
 var begin = document.querySelector('#start');
+var leader = document.querySelector('#leader');
 var timeBox = document.querySelector('#counter');
 var quizBox = document.querySelector('#quizArea');
 document.querySelector('#quizArea').style.display = "none";
+document.querySelector('#leaderArea').style.display = "none";
 
 var questions = [
     
@@ -90,15 +92,21 @@ function quizQ() {
 }
 
 function Game(){
-  document.querySelector('#startUp').style.display = "none";
   gameClock();
+  document.querySelector('#startUp').style.display = "none";
   document.querySelector('#quizArea').style.display = "flex";
 
 
 
 }
 
+function Leader(){
+  document.querySelector('#startUp').style.display = "none";
+  document.querySelector('#leaderArea').style.display = "flex";
+}
+
 
 
 begin.addEventListener("click", Game);
+leader.addEventListener("click", Leader);
 
