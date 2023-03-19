@@ -6,33 +6,54 @@ var quizBox = document.querySelector('#quizArea');
 
 var questions = [
     
-    {
-        number: 1,
-        question: "What do we name the main html file for our webpage?",
-        options: ["main.html", "page.html", "index.html", "core.html"],
-        answer: "index.html"
-
+  {
+    number: 1,
+    question: "What do we name the main html file for our webpage?",
+    options: ["main.html", "page.html", "index.html", "core.html"],
+    answer: "index.html"
     },
 
-    {
-        number: 2,
-        question: "At what integer does an array start at?",
-        options: ["0", "1", "10", "100"],
-        answer: "0"
+  {
+    number: 2,
+    question: "At what integer does an array start at?",
+    options: ["0", "1", "10", "100"],
+    answer: "0"
     },
 
-    {
-        number: 3,
-        question: "What symbol specifies you are working on an ID in CSS?",
-        options: [  
-                "$", 
-                "#", 
-                ".", 
-                "*"
-                ],
-        answer: "#"
+  {
+    number: 3,
+    question: "What symbol specifies you are working on an ID in CSS?",
+    options: ["$", "#", ".", "*"],
+    answer: "#"
+    },
+
+  {
+    number: 4,
+    question: "On what page do we normally store our Java Script language?",
+    options: ["java.js", "js.js", "script.js", "javascript.js"],
+    answer: "script.js"
+    },
+
+  {
+    number: 5,
+    question: "Which of the following means equal of value but not type?",
+    options: ["=", "!=", "===", "=="],
+    answer: "=="
+    },
+
+  {
+    number: 6,
+    question: "What tag is used for screen readers if an image doesn't load?",
+    options: ["alt", "text", "capt", "backup"],
+    answer: "alt"
+    },
+
+  {
+    number: 7,
+    question: "Which of the following identifies classes in CSS?",
+    options: ["&", ".", "@", "^"],
+    answer: "."
     }
-
 
 ]
 
@@ -69,7 +90,7 @@ function quizQ() {
 
 function Game(){
 
-    gameClock();
+  gameClock();
 
 
 }

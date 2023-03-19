@@ -59,3 +59,21 @@ main{
 #counter{
     font-size:3vh;
 }
+
+#quizArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#question{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.answer{
+    margin-left:10px;
+    margin-right:10px;
+}
