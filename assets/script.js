@@ -1,7 +1,7 @@
 var begin = document.querySelector('#start');
 var timeBox = document.querySelector('#counter');
 var quizBox = document.querySelector('#quizArea');
-
+document.querySelector('#quizArea').style.display = "none";
 
 var questions = [
     
@@ -92,6 +92,7 @@ function quizQ() {
 function Game(){
   document.querySelector('#startUp').style.display = "none";
   gameClock();
+  document.querySelector('#quizArea').style.display = "flex";
 
 
 
