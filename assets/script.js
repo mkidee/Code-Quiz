@@ -2,8 +2,12 @@ var begin = document.querySelector('#start');
 var leader = document.querySelector('#leader');
 var timeBox = document.querySelector('#counter');
 var quizBox = document.querySelector('#quizArea');
+var currentQ = document.querySelector('#question');
+var curSolutions = document.querySelectorAll(".solution");
+var QA = 0;
 document.querySelector('#quizArea').style.display = "none";
 document.querySelector('#leaderArea').style.display = "none";
+
 
 var questions = [
     
@@ -86,8 +90,12 @@ function gameClock() {
 }
 
 
-function quizQ() {
+function displayQ() {
+  currentQ.textContent = questions[QA].question;
 
+  for (let r = 0; r < 4; r++){
+    curSolutions[r].innerHTML = questions[QA].options[r];
+  }
 
 }
 
@@ -95,8 +103,7 @@ function Game(){
   gameClock();
   document.querySelector('#startUp').style.display = "none";
   document.querySelector('#quizArea').style.display = "flex";
-
-
+  displayQ();
 
 }
 
