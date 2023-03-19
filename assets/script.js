@@ -89,7 +89,6 @@ function gameClock() {
     }, 1000); 
 }
 
-
 function displayQ() {
   currentQ.textContent = questions[QA].question;
 
@@ -97,6 +96,28 @@ function displayQ() {
     curSolutions[r].innerHTML = questions[QA].options[r];
   }
 
+  Validate();
+
+}
+
+function Validate(){
+  correctSol = questions[QA].answer;
+  for (let r = 0; r < 4; r++) {
+    curSolutions[r].addEventListener('click', function(event) {
+      if (curSolutions[r].innerHTML === correctSol) {
+        alert("That is correct!")
+        QA++
+        // displayQ();
+        questions[QA].question++
+      }
+      else{
+        alert("That is incorrect.")
+        QA++
+        // displayQ();
+      }
+    }
+    )
+  }
 }
 
 function Game(){
@@ -111,6 +132,8 @@ function Leader(){
   document.querySelector('#startUp').style.display = "none";
   document.querySelector('#leaderArea').style.display = "flex";
 }
+
+
 
 
 
