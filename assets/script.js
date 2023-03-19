@@ -3,7 +3,6 @@ var timeBox = document.querySelector('#counter');
 var quizBox = document.querySelector('#quizArea');
 
 
-
 var questions = [
     
   {
@@ -84,13 +83,16 @@ function gameClock() {
     }, 1000); 
 }
 
+
 function quizQ() {
+
 
 }
 
 function Game(){
-
+  document.querySelector('#startUp').style.display = "none";
   gameClock();
+
 
 
 }

@@ -27,7 +27,7 @@ main{
     align-items: center;
 }
 
-.startUp{
+#startUp{
     display:flex;
     flex-direction: column;
     justify-content: center;
