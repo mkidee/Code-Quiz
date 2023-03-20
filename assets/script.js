@@ -1,3 +1,4 @@
+// Declaring all my variables here at the top to be used later.
 var begin = document.querySelector('#start');
 var leader = document.querySelector('#leader');
 var timeBox = document.querySelector('#counter');
@@ -5,10 +6,11 @@ var quizBox = document.querySelector('#quizArea');
 var currentQ = document.querySelector('#question');
 var curSolutions = document.querySelectorAll(".solution");
 var QA = 0;
+var points = 0;
 document.querySelector('#quizArea').style.display = "none";
 document.querySelector('#leaderArea').style.display = "none";
 
-
+// This array holds all the possible questions that the quiz will pull from (in order)
 var questions = [
     
   {
@@ -62,6 +64,7 @@ var questions = [
 
 ]
 
+// This function is how the clock pops up and functions once the start button is clicked.
 function gameClock() {
     time = 90 // Set the time remaining to 90 seconds.
     // setInterval method is used to repeatedly call the function containing the if statements every loop (1000ms).
@@ -89,6 +92,7 @@ function gameClock() {
     }, 1000); 
 }
 
+// This function is how the buttons are filled with each possible answer for each question
 function displayQ() {
   currentQ.textContent = questions[QA].question;
 
@@ -100,6 +104,8 @@ function displayQ() {
 
 }
 
+// Not currently functioning fully correctly
+// This function should tell the user if their quiz answer is correct, and then move on to the next question.
 function Validate(){
   correctSol = questions[QA].answer;
   for (let r = 0; r < 4; r++) {
@@ -107,19 +113,22 @@ function Validate(){
       if (curSolutions[r].innerHTML === correctSol) {
         alert("That is correct!")
         QA++
-        // displayQ();
-        questions[QA].question++
+        points++
+        displayQ();
       }
       else{
         alert("That is incorrect.")
         QA++
-        // displayQ();
+        points++
+        displayQ();
       }
     }
     )
   }
 }
 
+// This function is when the start button is pressed, it will remove the buttons, 
+//and bring the first quiz question to be answered.
 function Game(){
   gameClock();
   document.querySelector('#startUp').style.display = "none";
@@ -128,15 +137,14 @@ function Game(){
 
 }
 
+// This function is for when the leaderboard button is pressed, it will pull up the leaderboard and remove the rest.
 function Leader(){
   document.querySelector('#startUp').style.display = "none";
   document.querySelector('#leaderArea').style.display = "flex";
 }
 
 
-
-
-
+// Event listeners here at the bottom
 begin.addEventListener("click", Game);
 leader.addEventListener("click", Leader);
 
