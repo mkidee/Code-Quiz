@@ -92,6 +92,24 @@ function gameClock() {
     }, 1000); 
 }
 
+
+// var checkAnswer = function () {
+//   if (curSolutions[r].innerHTML === correctSol) {
+//     alert("That is correct!");
+//     QA++;
+//     points++;
+//     Validate();
+//     displayQ();
+//   }
+//   else (curSolutions[r].innerHTML != correctSol); {
+//     alert("That is incorrect.");
+//     QA++;
+//     Validate();
+//     displayQ();
+//   }
+// }
+
+
 // This function is how the buttons are filled with each possible answer for each question
 function displayQ() {
   currentQ.textContent = questions[QA].question;
@@ -109,23 +127,29 @@ function displayQ() {
 function Validate(){
   correctSol = questions[QA].answer;
   for (let r = 0; r < 4; r++) {
-    curSolutions[r].addEventListener('click', function(event) {
-      if (curSolutions[r].innerHTML === correctSol) {
-        alert("That is correct!")
-        QA++
-        points++
-        displayQ();
-      }
-      else{
-        alert("That is incorrect.")
-        QA++
-        points++
-        displayQ();
-      }
+    curSolutions[r].addEventListener("click", function(_event){
+    
+    if (curSolutions[r].innerHTML === correctSol) {
+      alert("That is correct!")
+      QA++
+      points++
+      Validate()
+      displayQ()
     }
-    )
-  }
+
+    else {
+      alert("That is incorrect.")
+      QA++
+      Validate()
+      displayQ()
+    }
+    
+  })}
 }
+
+
+
+
 
 // This function is when the start button is pressed, it will remove the buttons, 
 //and bring the first quiz question to be answered.
