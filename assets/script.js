@@ -127,28 +127,20 @@ function displayQ() {
 function Validate(){
   correctSol = questions[QA].answer;
   for (let r = 0; r < 4; r++) {
-    curSolutions[r].addEventListener("click", function(_event){
+    curSolutions[r].addEventListener("click", function(event){
     
     if (curSolutions[r].innerHTML === correctSol) {
       alert("That is correct!")
-      QA++
       points++
-      Validate()
-      displayQ()
     }
-
     else {
       alert("That is incorrect.")
-      QA++
-      Validate()
-      displayQ()
     }
-    
+      QA++
+      displayQ()
+
   })}
 }
-
-
-
 
 
 // This function is when the start button is pressed, it will remove the buttons, 
