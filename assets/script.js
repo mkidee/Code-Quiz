@@ -1,6 +1,7 @@
 // Declaring all my variables here at the top to be used later.
 var begin = document.querySelector('#start');
 var leader = document.querySelector('#leader');
+var leadReturn = document.querySelector('#returnButton');
 var timeBox = document.querySelector('#counter');
 var quizBox = document.querySelector('#quizArea');
 var currentQ = document.querySelector('#question');
@@ -159,8 +160,13 @@ function Leader(){
   document.querySelector('#leaderArea').style.display = "flex";
 }
 
+function leaderReturn(){
+  document.querySelector('#leaderArea').style.display = "none";
+  document.querySelector('#startUp').style.display = "flex";
+}
 
 // Event listeners here at the bottom
 begin.addEventListener("click", Game);
 leader.addEventListener("click", Leader);
+leadReturn.addEventListener("click", leaderReturn);
 
