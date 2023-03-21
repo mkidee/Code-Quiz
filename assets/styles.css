@@ -98,9 +98,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-width: 3px black;
     border-radius: 5px;
-   
 }
 
 #leaderTitle{
@@ -114,16 +112,25 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-left: 0;
     font-size: 20px;
     background-color: #7c8fba;
     box-shadow:0px 8px 10px #424e6b, -10px 8px 15px #424e6b, 10px 8px 15px #424e6b ;
-    width:75%;
-    height:200px;
+    width:100%;
+    height:auto;
     border-radius: 7px;
-    
+}
+
+.leaderItem{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #returnButton{
+    font-size: 2.5vh;
     margin-top: 50px;
-    padding:2vh 4vh;
+    padding:2vh 3.5vh;
 }
