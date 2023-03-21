@@ -118,7 +118,7 @@ function displayQ() {
   for (let r = 0; r < 4; r++){
     curSolutions[r].innerHTML = questions[QA].options[r];
   }
-
+  
   Validate();
 
 }
