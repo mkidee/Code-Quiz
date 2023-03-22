@@ -111,6 +111,39 @@ function gameClock() {
 // }
 
 
+// function Validate() {
+//   // Log the correct answer in the console for debugging purposes
+//   console.log(correctAnswer);
+//   // Set the correct answer for the current question
+//   correctAnswer = questions[QA].answer;
+//   // Create a new function to handle the click event
+//   function handleClick() {
+//     // Get the clicked element from the event object
+//     let clickedAnswer = event.target;
+//     // Check if the clicked element has the class ‘answer’
+//     if (clickedAnswer.classList.contains(‘answer’)) {
+//       // Remove the event listener to prevent additional clicks
+//       questionsBoxEl.removeEventListener(“click”, handleClick);
+//       // Check if the clicked answer matches the correct answer
+//       if (clickedAnswer.innerHTML === correctAnswer) {
+//         // If the answer is correct, display a success message and increment the player’s score
+//         alert(“That is correct!\nYou’ve earned a point!“);
+//         playerScore++;
+//       } else {
+//         // If the answer is incorrect, display an error message and decrement the remaining time
+//         alert(“That is incorrect.\n10 seconds have been removed from the clock.“);
+//         time = time - 10;
+//       }
+//       // Move on to the next question
+//       QA++;
+//       // Show the next question
+//       displayQ();
+//     }
+//   }
+//   // Re-add the event listener for next question
+//   curSolutions.addEventListener(“click”, handleClick);
+// }
+
 // This function is how the buttons are filled with each possible answer for each question
 function displayQ() {
   currentQ.textContent = questions[QA].question;
@@ -118,7 +151,7 @@ function displayQ() {
   for (let r = 0; r < 4; r++){
     curSolutions[r].innerHTML = questions[QA].options[r];
   }
-  
+
   Validate();
 
 }
@@ -128,7 +161,7 @@ function displayQ() {
 function Validate(){
   correctSol = questions[QA].answer;
   for (let r = 0; r < 4; r++) {
-    curSolutions[r].addEventListener("click", function(event){
+    curSolutions[r].addEventListener("click", function(_event){
     
     if (curSolutions[r].innerHTML === correctSol) {
       alert("That is correct!")
@@ -137,6 +170,7 @@ function Validate(){
     else {
       alert("That is incorrect.")
     }
+    
       QA++
       displayQ()
 
